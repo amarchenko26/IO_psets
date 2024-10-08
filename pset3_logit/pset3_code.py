@@ -104,9 +104,8 @@ X_c = df[['constant', 'DISTANCE', 'DEP_DELAY']].to_numpy()
 y_c = df[['late15']].to_numpy()
 
 def loglike(beta, X, y):
+
     likelihood = 0
-    
-    # Define a small value to avoid log(0)
     epsilon = 1e-10
     
     # Compute likelihood
